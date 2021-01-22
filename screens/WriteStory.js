@@ -1,5 +1,14 @@
 import React from 'react'
-import {ImageBackground, View, Text, StyleSheet,TouchableOpacity, Image} from 'react-native'
+import { 
+  ImageBackground, 
+  View, 
+  Text, 
+  StyleSheet,
+  TouchableOpacity,
+  KeyboardAvoidingView,
+  Platform,
+  ToastAndroid,
+} from 'react-native'
 import { TextInput } from 'react-native-paper';
 import firebase from 'firebase';
 import db from '../config';
@@ -45,7 +54,6 @@ export default class WriteStory extends React.Component{
       'content' : this.state.content,
       'date'   : firebase.firestore.Timestamp.now().toDate()
     })
-
     this.setState({
       title: '',
       author: '',
@@ -53,33 +61,52 @@ export default class WriteStory extends React.Component{
     })
   }
 
+  showAlert(){
+    alert("YOUR STORY IS SUBMITTED :)");
+  }
+
     render(){
+
+      const showToast = () => {
+        ToastAndroid.show("A pikachu appeared nearby !", ToastAndroid.SHORT);
+      };
+
       return(
         <View style={styles.container}>
           <ImageBackground source={image} style={styles.image}>
-            <Text style={styles.headers}>WRITE STORY</Text>
-            <TextInput
-              label="STORY TITLE"
-              value={this.state.title}
-              onChange={this.handleTitle} 
-              style={styles.textInput}
-            />
-            <TextInput
-              label="AUTHOR"
-              value={this.state.author}
-              onChange={this.handleAuthor} 
-              style={styles.textInput}
-            /> 
-            <TextInput
-              label="WRITE YOUR STORY"
-              value={this.state.content}
-              onChange={this.handleContent} 
-              style={styles.textInput}
-              multiline={true}
-            />         
-            <TouchableOpacity onPress={this.submitStory}>
-              <Text style={styles.buttonStyle}>SUBMIT</Text>
-            </TouchableOpacity>
+            <KeyboardAvoidingView
+              behavior={Platform.OS === "ios" ? "padding" : "height"}
+              style={styles.container}
+            >
+              <Text style={styles.headers}>WRITE STORY</Text>
+              <TextInput
+                label="STORY TITLE"
+                value={this.state.title}
+                onChange={this.handleTitle} 
+                style={styles.textInput}
+              />
+              <TextInput
+                label="AUTHOR"
+                value={this.state.author}
+                onChange={this.handleAuthor} 
+                style={styles.textInput}
+              /> 
+              <TextInput
+                label="WRITE YOUR STORY"
+                value={this.state.content}
+                onChange={this.handleContent} 
+                style={styles.textInput}
+                multiline={true}
+              />         
+              <TouchableOpacity onPress={() => 
+                { 
+                  //this.submitStory(); 
+                  this.showAlert();
+                }
+                }>
+                <Text style={styles.buttonStyle}>SUBMIT</Text>
+              </TouchableOpacity>
+            </KeyboardAvoidingView>
           </ImageBackground>
         </View>
       )
@@ -126,11 +153,4 @@ const styles = StyleSheet.create({
     marginLeft: '45%',
     fontSize: '25px',
   },
-  buttonText:{
-    fontSize: 30,
-  },
-  check:{
-    fontSize: 30, 
-
-  }
 });
