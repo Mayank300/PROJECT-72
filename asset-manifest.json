@@ -1,11 +1,11 @@
 {
   "files": {
-    "app.js": "/PROJECT-72/static/js/app.71a2bc66.chunk.js",
-    "app.js.map": "/PROJECT-72/static/js/app.71a2bc66.chunk.js.map",
+    "app.js": "/PROJECT-72/static/js/app.db5fc829.chunk.js",
+    "app.js.map": "/PROJECT-72/static/js/app.db5fc829.chunk.js.map",
     "runtime~app.js": "/PROJECT-72/static/js/runtime~app.434a117b.js",
     "runtime~app.js.map": "/PROJECT-72/static/js/runtime~app.434a117b.js.map",
-    "static/js/2.aa4124da.chunk.js": "/PROJECT-72/static/js/2.aa4124da.chunk.js",
-    "static/js/2.aa4124da.chunk.js.map": "/PROJECT-72/static/js/2.aa4124da.chunk.js.map",
+    "static/js/2.df594369.chunk.js": "/PROJECT-72/static/js/2.df594369.chunk.js",
+    "static/js/2.df594369.chunk.js.map": "/PROJECT-72/static/js/2.df594369.chunk.js.map",
     "fonts/MaterialCommunityIcons.ttf": "/PROJECT-72/./fonts/MaterialCommunityIcons.ttf",
     "favicon-16.png": "/PROJECT-72/favicon-16.png",
     "favicon-32.png": "/PROJECT-72/favicon-32.png",
@@ -13,14 +13,14 @@
     "index.html": "/PROJECT-72/index.html",
     "manifest.json": "/PROJECT-72/manifest.json",
     "serve.json": "/PROJECT-72/serve.json",
-    "static/js/2.aa4124da.chunk.js.LICENSE.txt": "/PROJECT-72/static/js/2.aa4124da.chunk.js.LICENSE.txt",
+    "static/js/2.df594369.chunk.js.LICENSE.txt": "/PROJECT-72/static/js/2.df594369.chunk.js.LICENSE.txt",
     "static/media/home.png": "/PROJECT-72/static/media/home.64ac6f4d.png",
     "static/media/read.png": "/PROJECT-72/static/media/read.bab2041c.png",
     "static/media/write.png": "/PROJECT-72/static/media/write.85de73b4.png"
   },
   "entrypoints": [
     "static/js/runtime~app.434a117b.js",
-    "static/js/2.aa4124da.chunk.js",
-    "static/js/app.71a2bc66.chunk.js"
+    "static/js/2.df594369.chunk.js",
+    "static/js/app.db5fc829.chunk.js"
   ]
 }
