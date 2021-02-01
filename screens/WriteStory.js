@@ -16,20 +16,20 @@ export default class WriteStory extends React.Component {
     };
   }
 
-  handleTitle(event) {
-    this.setState({ title: event.target.value });
-    console.log("title is working");
-  }
+  // handleTitle(event) {
+  //   this.setState({ title: event.target.value });
+  //   console.log("title is working");
+  // }
 
-  handleAuthor(event) {
-    this.setState({ author: event.target.value });
-    console.log("title is author");
-  }
+  // handleAuthor(event) {
+  //   this.setState({ author: event.target.value });
+  //   console.log("title is author");
+  // }
 
-  handleContent(event) {
-    this.setState({ content: event.target.value });
-    console.log("title is content");
-  }
+  // handleContent(event) {
+  //   this.setState({ content: event.target.value });
+  //   console.log("title is content");
+  // }
 
   submitStory = () => {
     //add a story
@@ -43,7 +43,7 @@ export default class WriteStory extends React.Component {
       author: '',
       content: ''
     })
-    ToastAndroid.show('Your story has been sumitted', ToastAndroid.SHORT)
+    // ToastAndroid.show('Your story has been sumitted', ToastAndroid.SHORT)
   }
 
   render() {
@@ -82,7 +82,7 @@ export default class WriteStory extends React.Component {
                 })
               }}
               placeholderTextColor='black'
-              value={this.state.storyText}
+              value={this.state.content}
               style={styles.textInput}
               multiline={true}
             />
