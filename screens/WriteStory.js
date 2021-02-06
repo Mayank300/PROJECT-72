@@ -16,6 +16,10 @@ export default class WriteStory extends React.Component {
     };
   }
 
+  // showText = () => {
+  //   ToastAndroid.show('Your story has been sumitted', ToastAndroid.SHORT)
+  // }
+
   // handleTitle(event) {
   //   this.setState({ title: event.target.value });
   //   console.log("title is working");
@@ -43,7 +47,7 @@ export default class WriteStory extends React.Component {
       author: '',
       content: ''
     })
-    // ToastAndroid.show('Your story has been sumitted', ToastAndroid.SHORT)
+    ToastAndroid.show('Your story has been sumitted', ToastAndroid.SHORT)
   }
 
   render() {
